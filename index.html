@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amen Tchake | Aspiring Machine Learning Engineer</title>
+<meta name="description" content="Amen Tchake: Aspiring Machine Learning Engineer, Python Developer, AI and Computer Vision Enthusiast based in Accra, Ghana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF1F6;--ink:#0F1B33;--mute:#4A566E;--line:#CBD3E1;--blue:#2447E8;--gold:#F2B134;--paper:#fff;--green:#15803D}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1424;--ink:#E8ECF6;--mute:#9AA6C0;--line:#26304A;--blue:#7F9BFF;--paper:#151C31;--green:#4ADE80}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 Roboto,Arial,sans-serif}
+h1,h2,h3{font-family:Roboto,Arial,sans-serif;line-height:1.05;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+nav b{font-family:Roboto,Arial;font-size:1.1rem}
+nav ul{display:flex;gap:22px;list-style:none;padding:0;font-size:.95rem}
+nav a{text-decoration:none;color:var(--mute);background:linear-gradient(var(--blue),var(--blue)) 0 100%/0 2px no-repeat;transition:background-size .25s,color .25s;padding-bottom:3px}
+nav a:hover{color:var(--ink);background-size:100% 2px}
+
+/* hero */
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:32px;padding:48px 0 72px}
+.hero h1{font-size:clamp(2.8rem,7vw,5.2rem);font-weight:800}
+.role{margin:4px 0 10px;font:700 clamp(1.2rem,3.2vw,1.9rem)/1.3 Roboto,Arial,sans-serif;color:var(--green);min-height:1.4em}
+.role::after{content:"";display:inline-block;width:2px;height:1.1em;background:var(--green);margin-left:3px;vertical-align:-.15em;animation:blink 1s steps(1) infinite}
+.lede{max-width:52ch;margin:0 auto;color:var(--mute)}
+.cta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:500;border:1.5px solid var(--ink);transition:transform .2s,background .2s,color .2s}
+.btn.main{background:var(--ink);color:var(--bg)}
+.btn:hover{transform:translateY(-3px)}
+.btn:not(.main):hover{background:var(--ink);color:var(--bg)}
+
+/* the scan: one orchestrated moment, echoing the face recognition project */
+.scan{position:relative;width:260px;max-width:100%;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:var(--paper);border:1px solid var(--line)}
+.scan img,.scan .fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.fallback{display:none;place-items:center;font:800 5rem Roboto,Arial;color:var(--line)}
+.scan.noimg .fallback{display:grid}.scan.noimg img{display:none}
+.box{position:absolute;left:18%;top:14%;width:64%;height:54%;opacity:0;animation:lock 1.6s .5s cubic-bezier(.2,.8,.2,1) forwards}
+.box i{position:absolute;width:22px;height:22px;border:3px solid var(--gold)}
+.box i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0}
+.box i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0}
+.box i:nth-child(3){left:0;bottom:0;border-right:0;border-top:0}
+.box i:nth-child(4){right:0;bottom:0;border-left:0;border-top:0}
+.line{position:absolute;left:0;right:0;height:2px;background:var(--gold);box-shadow:0 0 14px 2px var(--gold);top:0;opacity:0;animation:sweep 1.4s .2s ease-in-out}
+@keyframes lock{0%{opacity:0;transform:scale(1.7)}30%{opacity:1}100%{opacity:1;transform:scale(1)}}
+@keyframes fade{to{opacity:1}}
+@keyframes sweep{0%{top:0;opacity:1}100%{top:100%;opacity:0}}
+@keyframes blink{50%{opacity:0}}
+
+/* sections */
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:36px}
+
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:36px;padding:34px;background:var(--ink);color:var(--bg);border-radius:16px;margin-bottom:12px}
+.feature h3{font-size:2rem;margin-bottom:12px}
+.feature p{opacity:.85}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.stack span{font-size:.82rem;padding:4px 11px;border-radius:99px;border:1px solid currentColor;opacity:.85}
+.feature ul{padding-left:18px;opacity:.9}.feature li{margin-bottom:8px}
+.links a{margin-right:18px;font-weight:500;text-underline-offset:4px}
+.row{display:grid;grid-template-columns:230px 1fr auto;gap:24px;align-items:baseline;padding:26px 8px;border-bottom:1px solid var(--line);transition:padding .25s,background .25s}
+.row:hover{padding-left:20px;background:var(--paper)}
+.row h3{font-size:1.35rem}.row p{color:var(--mute)}.row a{font-weight:500;text-underline-offset:4px;color:var(--blue)}
+
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px}
+.cols h3{font-size:1.1rem;margin-bottom:12px}
+.cols li{list-style:none;padding:6px 0;border-bottom:1px solid var(--line);color:var(--mute)}
+.cols ul{padding:0}
+
+.tl{border-left:2px solid var(--line);padding-left:28px}
+.tl article{position:relative;padding-bottom:34px}
+.tl article::before{content:"";position:absolute;left:-36px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--blue)}
+.tl time{font-size:.9rem;color:var(--mute)}
+.tl h3{font-size:1.3rem;margin:2px 0 6px}.tl p{color:var(--mute);max-width:62ch}
+
+.contact{font:800 clamp(1.8rem,5vw,3.6rem)/1.1 Roboto,Arial;letter-spacing:-.02em}
+.contact a{text-decoration:none;background:linear-gradient(var(--gold),var(--gold)) 0 92%/100% 8px no-repeat;transition:background-size .3s}
+.contact a:hover{background-size:100% 100%}
+.meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:22px;color:var(--mute)}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--mute);font-size:.9rem}
+
+
+/* parallax: layers drift at different speeds on scroll (CSS scroll-driven animations) */
+html{overflow-x:clip}
+.hero{position:relative;isolation:isolate}
+.plx{position:absolute;inset:-48px 0;z-index:-1;pointer-events:none}
+.plx span{position:absolute;border-radius:50%}
+.p1{width:360px;height:360px;left:-5%;top:4%;border:1.5px solid var(--line);--d:-80px}
+.p2{width:190px;height:190px;right:1%;top:28%;background:var(--gold);opacity:.3;--d:-240px}
+.p3{width:90px;height:90px;left:16%;top:72%;border:3px solid var(--blue);opacity:.45;--d:-150px}
+.p4{width:46px;height:46px;right:20%;top:78%;background:var(--blue);opacity:.35;--d:-320px}
+@supports (animation-timeline:scroll()){
+ .plx span{animation:drift linear both;animation-timeline:scroll(root);animation-range:0 100vh}
+ .scan{animation:photo linear both;animation-timeline:scroll(root);animation-range:0 80vh}
+}
+@keyframes drift{to{transform:translateY(var(--d))}}
+@keyframes photo{to{transform:translateY(-30px)}}
+.band{margin:0 calc(50% - 50vw);padding:110px 24px;text-align:center;color:#fff;
+ background:linear-gradient(rgba(15,27,51,.88),rgba(15,27,51,.88)),radial-gradient(circle,#7F9BFF 1.5px,transparent 1.6px) 0 0/28px 28px,#0F1B33;
+ background-attachment:fixed}
+.band p{max-width:24ch;margin:0 auto;font:800 clamp(1.9rem,5vw,3.4rem)/1.1 Roboto,Arial,sans-serif;letter-spacing:-.02em}
+.band small{display:block;margin-top:18px;color:#B9C4E0;font-size:1rem}
+@media (prefers-reduced-motion:reduce){.band{background-attachment:scroll}}
+
+/* contact */
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin-top:40px;border-top:1px solid var(--line)}
+.cgrid>*{display:block;padding:20px 4px;border-bottom:1px solid var(--line);text-decoration:none;transition:padding .25s,background .25s}
+.cgrid a:hover{padding-left:14px;background:var(--paper)}
+.cgrid small{display:block;color:var(--mute);font-size:.85rem}
+.cgrid b{font-weight:500}
+.lead{max-width:52ch;color:var(--mute);margin-bottom:22px}
+
+/* scroll reveal: words appear one by one */
+.w{display:inline-block;opacity:0;transform:translateY(.7em);filter:blur(5px);transition:opacity .6s ease,transform .6s ease,filter .6s ease}
+.on .w{opacity:1;transform:none;filter:none}
+.fx{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.fx.on{opacity:1;transform:none}
+/* AI illustrations on both sides, drifting at their own speed */
+.side{position:fixed;top:0;left:10px;width:140px;z-index:-1;pointer-events:none;opacity:.12;color:var(--blue)}
+.side.right{left:auto;right:10px;color:var(--green)}
+.side svg{display:block;width:100%;margin-bottom:96px}
+.nd{animation:pulse 3.2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.3}}
+@keyframes railL{from{transform:translateY(10vh)}to{transform:translateY(-55%)}}
+@keyframes railR{from{transform:translateY(-35%)}to{transform:translateY(12vh)}}
+@supports (animation-timeline:scroll()){
+ .side{animation:railL linear both;animation-timeline:scroll(root)}
+ .side.right{animation-name:railR}
+}
+@media (min-width:1300px){.side{opacity:.5;left:2vw;width:clamp(110px,calc((100vw - 1088px)/2),260px)}.side.right{left:auto;right:2vw}}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+@media (max-width:820px){
+ .feature{grid-template-columns:1fr;padding:24px}.row{grid-template-columns:1fr;gap:6px}
+ nav ul{gap:14px;font-size:.88rem}
+}
+@media (prefers-reduced-motion:reduce){
+ *{animation:none!important;transition:none!important}
+ .box{opacity:1}}
+</style>
+</head>
+<body>
+<div class="side left" id="sl" aria-hidden="true"></div><div class="side right" id="sr" aria-hidden="true"></div>
+
+<nav><div class="wrap"><b>Amen Tchake</b>
+<ul><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+
+<main class="wrap">
+
+<header class="hero">
+ <div class="plx" aria-hidden="true"><span class="p1"></span><span class="p2"></span><span class="p3"></span><span class="p4"></span></div>
+ <!-- PHOTO: put your picture at assets/photo.jpg (portrait, ~800x1000). Face in the upper-middle of the frame works best. -->
+ <div class="scan" id="scan">
+  <img src="assets/photo.jpg" alt="Portrait of Amen Tchake" onerror="document.getElementById('scan').classList.add('noimg')">
+  <div class="fallback" aria-hidden="true">AT</div>
+  <div class="line"></div>
+  <div class="box" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+ </div>
+ <div>
+  <h1>Amen Tchake</h1>
+  <p class="role" id="role" aria-label="Aspiring Machine Learning Engineer, Python Developer, AI and Computer Vision Enthusiast"></p>
+  <p class="lede">I'm a BSc Artificial Intelligence student in Accra who builds systems that recognise faces and the interfaces people use to work with them. I care about accuracy, clean design and shipping things that work.</p>
+  <div class="cta"><a class="btn main" href="#projects">See my projects</a><a class="btn" href="mailto:amentchake1@gmail.com">Email me</a></div>
+ </div>
+</header>
+
+<div class="band"><p>I build models that see and interfaces that feel simple.</p><small>Computer vision · Web development · Visual design</small></div>
+
+<section id="projects">
+ <h2>Projects</h2>
+
+ <article class="feature">
+  <div>
+   <h3>Real-Time Face Recognition Attendance System</h3>
+   <p>A camera-based system that recognises people and logs their attendance automatically, so nobody has to call a roll. In progress since April 2026.</p>
+   <div class="stack"><span>Python</span><span>OpenCV</span><span>Face Recognition</span><span>Supabase</span></div>
+   <p class="links"><a href="https://github.com/YOUR_USERNAME/face-recognition-attendance">Code</a><a href="#">Demo</a></p>
+  </div>
+  <ul>
+   <li>Matches faces from a live camera feed in real time.</li>
+   <li>Saves attendance records in a Supabase database.</li>
+   <li>Checks its own output for misrecognitions and corrects them.</li>
+  </ul>
+ </article>
+
+ <div>
+  <div class="row"><h3>Three websites</h3><p>Front-end for a music site, an e-commerce store and a corporate site, built during my JSCOM Benin internship with HTML, CSS, JavaScript and PHP.</p><a href="https://github.com/YOUR_USERNAME/web-projects">Code</a></div>
+  <div class="row"><h3>Video series</h3><p>Twenty videos edited in CapCut and Filmora, checked for visual and audio quality and consistency across the series.</p><a href="#">Watch</a></div>
+  <div class="row"><h3>Graphic design</h3><p>Posters, promotional visuals and communication materials designed in Photoshop and Canva.</p><a href="#">View</a></div>
+ </div>
+</section>
+
+<section id="skills">
+ <h2>Skills</h2>
+ <div class="cols">
+  <div><h3>Code</h3><ul><li>Python</li><li>C</li><li>JavaScript</li><li>PHP</li><li>HTML &amp; CSS</li></ul></div>
+  <div><h3>AI &amp; data</h3><ul><li>OpenCV</li><li>Face Recognition</li><li>Supabase</li><li>Quantitative analysis</li></ul></div>
+  <div><h3>Design &amp; media</h3><ul><li>Adobe Photoshop</li><li>Canva</li><li>CapCut</li><li>Filmora</li></ul></div>
+  <div><h3>How I work</h3><ul><li>Self-directed and reliable</li><li>Remote and async teamwork</li><li>English &amp; French</li><li>Public speaking</li></ul></div>
+ </div>
+</section>
+
+<section id="experience">
+ <h2>Experience and education</h2>
+ <div class="tl">
+  <article><time>Sept 2025 – Present</time><h3>BSc Artificial Intelligence</h3><p>Academic City University College, Accra, Ghana.</p></article>
+  <article><time>Jun – Aug 2024</time><h3>Front-End Web Development Intern</h3><p>JSCOM Benin, Cotonou. Built the front end of three websites and worked with a team to turn requirements into working pages.</p></article>
+  <article><time>Jul – Aug 2023</time><h3>Graphic Design Intern</h3><p>Cotonou, Benin. Designed posters and promotional visuals in Photoshop, with close attention to layout and colour.</p></article>
+  <article><time>2022 – 2023</time><h3>Science Track, GPA 16/20</h3><p>Les Cours GAMA, Cotonou, Benin. Also holds an Advanced English Certificate.</p></article>
+ </div>
+</section>
+
+<section id="contact">
+ <h2>Contact</h2>
+ <p class="lead">I'm open to internships, junior roles and remote work in AI, computer vision and web development. The fastest way to reach me is email.</p>
+ <p class="contact"><a href="mailto:amentchake1@gmail.com">amentchake1@gmail.com</a></p>
+ <div class="cgrid">
+  <a href="https://linkedin.com/in/amen-tchake-a61643289"><small>LinkedIn</small><b>amen-tchake</b></a>
+  <a href="https://github.com/YOUR_USERNAME"><small>GitHub</small><b>YOUR_USERNAME</b></a>
+  <div><small>Location</small><b>Haatso, Accra, Ghana</b></div>
+  <div><small>Availability</small><b>Internships and remote work</b></div>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap">© <span id="y"></span> Amen Tchake</div></footer>
+
+<script>
+// AI-themed illustrations (neural net, face landmarks, chip, tensor, loss curve)
+(function(){
+ function S(x){return '<svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.4">'+x+'</svg>'}
+ function net(L){var xs=[30,100,170],P=L.map(function(n,i){return Array.from({length:n},function(_,j){return[xs[i],200/(n+1)*(j+1)]})}),o='';
+  for(var i=0;i<P.length-1;i++)P[i].forEach(function(a){P[i+1].forEach(function(b){o+='<line x1="'+a[0]+'" y1="'+a[1]+'" x2="'+b[0]+'" y2="'+b[1]+'" opacity=".45"/>'})});
+  var k=0;P.forEach(function(c){c.forEach(function(a){o+='<circle class="nd" style="animation-delay:'+(k++*.25)+'s" cx="'+a[0]+'" cy="'+a[1]+'" r="6" fill="currentColor"/>'})});return S(o)}
+ var face=S('<ellipse cx="100" cy="100" rx="52" ry="68"/><circle cx="78" cy="88" r="7"/><circle cx="122" cy="88" r="7"/><path d="M100 95V120L92 126H108"/><path d="M80 146Q100 160 120 146"/><path d="M78 88L100 120L122 88M80 146L100 120L120 146" opacity=".4"/><g class="nd" fill="currentColor" stroke="none"><circle cx="78" cy="88" r="3"/><circle cx="122" cy="88" r="3"/><circle cx="100" cy="120" r="3"/><circle cx="80" cy="146" r="3"/><circle cx="120" cy="146" r="3"/></g><path d="M22 52V22H52M148 22H178V52M22 148V178H52M148 178H178V148" stroke-width="3"/>');
+ var chip=S('<rect x="70" y="70" width="60" height="60" rx="6"/><rect x="86" y="86" width="28" height="28" rx="3" fill="currentColor" opacity=".35"/><path d="M82 70V40H40M100 70V30M118 70V45H160M82 130V160H50M100 130V172M118 130V155H165M70 82H40V60M70 118H30M130 82H170V60M130 118H175"/><g fill="currentColor" stroke="none"><circle cx="40" cy="40" r="4"/><circle cx="100" cy="30" r="4"/><circle cx="160" cy="45" r="4"/><circle cx="50" cy="160" r="4"/><circle cx="100" cy="172" r="4"/><circle cx="165" cy="155" r="4"/></g>');
+ var g='';for(var i=0;i<7;i++)for(var j=0;j<7;j++)g+='<rect x="'+(9+i*26)+'" y="'+(9+j*26)+'" width="22" height="22" rx="3" fill="currentColor" stroke="none" opacity="'+(((i*7+j*13)%10)/10*.8+.1).toFixed(2)+'"/>';
+ var grid=S(g);
+ var curve=S('<path d="M20 20V180H185"/><path d="M25 40C60 40 70 150 110 160S170 172 185 172" stroke-width="2.4"/><path d="M25 70C70 70 90 120 130 130S175 140 185 140" stroke-dasharray="4 5" opacity=".5"/><g fill="currentColor" stroke="none"><circle class="nd" cx="60" cy="86" r="4"/><circle class="nd" cx="110" cy="160" r="4"/><circle class="nd" cx="165" cy="171" r="4"/></g>');
+ document.getElementById('sl').innerHTML=net([3,4,2])+face+chip;
+ document.getElementById('sr').innerHTML=grid+curve+net([2,5,3]);
+})();
+document.getElementById('y').textContent=new Date().getFullYear();
+// handwriting-style reveal of the headline, typed once
+(function(){
+ var el=document.getElementById('role'),t="Aspiring Machine Learning Engineer | Python Developer | AI & Computer Vision Enthusiast",c=0;
+ if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=t;return}
+ setTimeout(function tick(){
+  c++;el.textContent=t.slice(0,c);
+  if(c<t.length)setTimeout(tick,/[|]/.test(t[c-1])?260:55+Math.random()*45);
+ },2400);
+})();
+// scroll reveal: words appear little by little, elements fade up
+(function(){
+ var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ if(reduce)return;
+ var split='section h2,.lede,.lead,.band p,.band small,.feature h3,.feature p:not(.links),.feature li,.row h3,.row p,.cols h3,.cols li,.tl time,.tl h3,.tl p,.cgrid small,.cgrid b';
+ var fx='.stack,.links,.row a,.contact,.hero .cta';
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.2,rootMargin:'0px 0px -6% 0px'});
+ document.querySelectorAll(split).forEach(function(el){
+  var words=el.textContent.trim().split(/\s+/);el.setAttribute('aria-label',words.join(' '));el.textContent='';
+  words.forEach(function(w,i){var sp=document.createElement('span');sp.className='w';sp.setAttribute('aria-hidden','true');sp.style.transitionDelay=(i*40)+'ms';sp.textContent=w;el.appendChild(sp);if(i<words.length-1)el.appendChild(document.createTextNode(' '))});
+  io.observe(el);
+ });
+ document.querySelectorAll(fx).forEach(function(el){el.classList.add('fx');io.observe(el)});
+})();
+</script>
+</body>
+</html>
